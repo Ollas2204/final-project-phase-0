@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+</head>
+
+<body style="background-color:rgb(204, 184, 42)"">
+  <!-- <form> -->
+  <p style="text-align:text-lg-left;">Trip Destination :</p>
+  <select id="destination">
+  <option value="Komodo">Komodo</option>
+  <option value="Garut">Garut</option>
+  <option value="Yogyakarta">Yogyakarta</option>
+</select><br><br>
+  <p style="text-align:text-lg-left;">How many people :</p>
+  <select id="people">
+<option value="1">1 People</option>
+<option value="2">2 People</option>
+<option value="3">3 People</option>
+<option value="4">4 People</option>
+<option value="5">5 People</option>
+</select><br><br>
+  <button onclick="olla()" class="btn btn-primary">Submit</button>
+  <!-- </form> -->
+  <br>
+  <p id="hasil"> please select the data and press submit </p>
+  <script>
+    function olla() {
+      var people = document.getElementById('people').value
+      var destination = document.getElementById('destination').value
+      var hasil = 0
+      if (destination == 'Komodo') {
+        hasil = people * 2300000
+      }
+      if (destination == 'Garut') {
+        hasil = people * 150000
+      }
+      if (destination == 'Yogyakarta') {
+        hasil = people * 500000
+      }
+      document.getElementById('hasil').innerHTML = hasil
+    }
+  </script>
+  <!-- Footer -->
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Olla's Journey 2018</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
